@@ -16,7 +16,7 @@ Before you can use this application, make sure you have the following prerequisi
 1. Clone this repository to your local machine.
 
    ```bash
-   git clone https://github.com/yourusername/draw-random-name-app.git
+   git clone https://github.com/simongavris/draw_names.git
    ```
 
 2. Change to the project directory:
@@ -30,7 +30,7 @@ Before you can use this application, make sure you have the following prerequisi
    If you want to use a custom domain to access the application, create a `docker-compose.override.yml` file and specify the domain in the override file. For example:
 
    ```yaml
-   version: '3.8'
+   version: '3'
 
    services:
      draw_random_name:
@@ -63,8 +63,3 @@ docker-compose down
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Special thanks to Traefik for providing a powerful reverse proxy solution.
-- The idea for this application was inspired by the need to draw random names from a list.
