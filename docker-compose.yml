@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  draw_random_name:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy" # Assuming Traefik runs on the "proxy" network
+      - "traefik.http.routers.draw_random_name.rule=Host(`yourdomain.com`)" # Replace with your domain
+      - "traefik.http.routers.draw_random_name.entrypoints=websecure"
+      - "traefik.http.routers.draw_random_name.tls.certresolver=defaultresolver"

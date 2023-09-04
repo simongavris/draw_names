@@ -1,0 +1,122 @@
+/* Reset some default styles for consistency */
+body, h1, p, label {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the body for a clean background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the container */
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    text-align: center;
+}
+
+/* Style the header */
+h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+/* Style the form */
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+/* Style the textarea */
+textarea.full-width {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical; /* Allow vertical resizing */
+    margin-bottom: 10px;
+}
+
+/* Style the number input */
+.number-input {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+/* Style the number input label */
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Style the number input */
+input[type="number"] {
+    width: auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: none;
+}
+
+/* Style the draw button */
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 3px;
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #258cd1;
+}
+
+/* Style the result container */
+.result {
+    text-align: left;
+}
+
+/* Style individual result items */
+p {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #ecf0f1;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Style toast messages */
+.toast {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.toast.show {
+    display: block;
+}
