@@ -1,4 +1,7 @@
 version: '3.8'
+networks:
+    proxy:
+        external: true
 
 services:
   draw_random_name:
@@ -11,3 +14,5 @@ services:
       - "traefik.http.routers.draw_random_name.rule=Host(`yourdomain.com`)" # Replace with your domain
       - "traefik.http.routers.draw_random_name.entrypoints=websecure"
       - "traefik.http.routers.draw_random_name.tls.certresolver=defaultresolver"
+    networks:
+      - proxy
